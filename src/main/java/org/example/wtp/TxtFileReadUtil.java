@@ -1,8 +1,6 @@
 package org.example.wtp;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author wtp
@@ -20,13 +18,10 @@ public class TxtFileReadUtil {
 
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(desFile));
-        String line = "";
+        String line;
         StringBuilder stringBuilder = new StringBuilder();
 
         while ((line = bufferedReader.readLine()) != null) {
-            if (line == null) {
-                break;
-            }
             stringBuilder.append("'").append(line).append("',");
         }
         bufferedWriter.write(stringBuilder.toString());
