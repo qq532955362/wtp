@@ -1,11 +1,17 @@
 package org.example.wtp.youzan;
 
 import com.youzan.cloud.open.sdk.common.exception.SDKException;
+import com.youzan.cloud.open.sdk.core.client.auth.Token;
 import com.youzan.cloud.open.sdk.core.client.core.DefaultYZClient;
 import com.youzan.cloud.open.sdk.core.oauth.model.OAuthToken;
 import com.youzan.cloud.open.sdk.core.oauth.token.TokenParameter;
 import com.youzan.cloud.open.sdk.gen.v4_0_0.api.YouzanTradesSoldGet;
 import com.youzan.cloud.open.sdk.gen.v4_0_0.model.YouzanTradesSoldGetParams;
+import com.youzan.cloud.open.sdk.gen.v4_0_1.model.YouzanTradesSoldGetResult;
+import org.example.wtp.youzan.constant.QiTianZhenEnlightenProperties;
+import org.example.wtp.youzan.domain.YouZanGoodsId;
+
+import java.util.Date;
 
 /**
  * @author wtp
@@ -13,37 +19,56 @@ import com.youzan.cloud.open.sdk.gen.v4_0_0.model.YouzanTradesSoldGetParams;
  */
 public class YouZanTokenClient {
 
-    private final static String CLIENT_ID = "c1ec50fec659767243";
-
-    private static final String CLIENT_SECRET = "a8c0d8dd7e636cbce03b696cce7ac1ab";
-
-    private static final String GRANT_ID = "42652714";
-
 
     public static void main(String[] args) throws SDKException {
+        System.out.println(getToken().getAccessToken());
+    }
+
+    public static Token getToken() {
         DefaultYZClient yzClient = new DefaultYZClient();
-        TokenParameter tokenParameter = TokenParameter.self()
-                .clientId(CLIENT_ID)
-                .clientSecret(CLIENT_SECRET)
-                .grantId(GRANT_ID)
-                .refresh(true)
-                .build();
+        TokenParameter tokenParameter = null;
+        try {
+            tokenParameter = TokenParameter.self()
+                    .clientId(QiTianZhenEnlightenProperties.CLIENT_ID)
+                    .clientSecret(QiTianZhenEnlightenProperties.CLIENT_SECRET)
+                    .grantId(QiTianZhenEnlightenProperties.GRANT_ID)
+                    .refresh(true)
+                    .build();
+        } catch (SDKException e) {
+            System.out.println(e.getMessage());
+        }
 
-        OAuthToken oAuthToken = yzClient.getOAuthToken(tokenParameter);
+        OAuthToken oAuthToken = null;
+        try {
+            oAuthToken = yzClient.getOAuthToken(tokenParameter);
+        } catch (SDKException e) {
+            System.out.println(e.getMessage());
+        }
+        return new Token(oAuthToken.getAccessToken());
+    }
 
-        System.out.println(oAuthToken.getAccessToken());
-
+    public static void searchYouZanOrder(YouZanGoodsId youZanGoodsId, Date startDate, Date endDate) {
+        DefaultYZClient yzClient = new DefaultYZClient();
 
         YouzanTradesSoldGet youzanTradesSoldGet = new YouzanTradesSoldGet();
 
         YouzanTradesSoldGetParams youzanTradesSoldGetParams = new YouzanTradesSoldGetParams();
-        youzanTradesSoldGetParams.setGoodsId(876051907L);
+        youzanTradesSoldGetParams.setGoodsId(youZanGoodsId.getValue());
+        youzanTradesSoldGetParams.setStartCreated(startDate);
+        youzanTradesSoldGetParams.setEndUpdate(endDate);
         youzanTradesSoldGet.setAPIParams(youzanTradesSoldGetParams);
+
+        YouzanTradesSoldGetResult result;
+        try {
+            result = yzClient.invoke(youzanTradesSoldGet, getToken(), YouzanTradesSoldGetResult.class);
+        } catch (SDKException e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 
 
-
-
     public YouZanTokenClient() throws SDKException {
+
     }
 }
