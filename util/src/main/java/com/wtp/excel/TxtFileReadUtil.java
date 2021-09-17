@@ -1,4 +1,6 @@
-package org.example.wtp;
+package com.wtp.excel;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.*;
 
@@ -29,7 +31,7 @@ public class TxtFileReadUtil {
         StringBuilder stringBuilder = new StringBuilder();
 
         while ((line = bufferedReader.readLine()) != null) {
-            if (line.isBlank()) {
+            if (StringUtils.isBlank(line)) {
                 continue;
             }
             //TODO 这里写个正则过滤一下电话 不是电话的输出一个提示
