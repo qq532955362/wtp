@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 /**
  * @author wangtaiping
@@ -18,18 +19,26 @@ public class Reader {
 
     private final static String SQL = "sql|Sql|SQL";
 
+    private final static Pattern compile = Pattern.compile(SQL);
+
     public static void getExcelSheet(String excelFilepath) throws Exception {
         if (excelFilepath == null || (!excelFilepath.endsWith(".xlsx") && !excelFilepath.endsWith(".xls"))) {
             throw new Exception("目标文件格式有问题");
         }
         ExcelReader excelReader = EasyExcel.read(excelFilepath).build();
+
         ExcelReadExecutor excelReadExecutor = excelReader.excelExecutor();
         final List<ReadSheet> readSheetList = excelReadExecutor.sheetList();
 
+        final List<ReadSheet> collect = readSheetList.stream().filter(a -> "球员SQL".equals(a.getSheetName())).collect(Collectors.toList());
+        final ReadSheet readSheet = collect.get(0);
+        final String sheetName = readSheet.getSheetName();
 
-        final Pattern compile = Pattern.compile(SQL);
+        final Integer sheetNo = readSheet.getSheetNo();
 
-        readSheetList.stream().filter(a -> compile.matcher(a.getSheetName()).matches());
+        System.out.println(sheetNo);
+
+        System.out.println(sheetName);
 
     }
 
