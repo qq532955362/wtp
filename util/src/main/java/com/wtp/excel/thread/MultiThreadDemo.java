@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class MultiThreadDemo {
 
-    private static final AtomicInteger FLAG = new AtomicInteger(1);
+    private static volatile AtomicInteger FLAG = new AtomicInteger(1);
 
     private static final ReentrantLock REENTRANT_LOCK = new ReentrantLock();
 
@@ -26,23 +26,22 @@ public class MultiThreadDemo {
     }
 
     static void hangOnThread() {
-        EXECUTOR.execute(MultiThreadDemo::run);
-        EXECUTOR.execute(MultiThreadDemo::run2);
-        EXECUTOR.execute(MultiThreadDemo::run3);
-        EXECUTOR.execute(MultiThreadDemo::run);
-        EXECUTOR.execute(MultiThreadDemo::run2);
-        EXECUTOR.execute(MultiThreadDemo::run3);
-        EXECUTOR.shutdown();
+//        EXECUTOR.execute(MultiThreadDemo::run);
+//        EXECUTOR.execute(MultiThreadDemo::run2);
+//        EXECUTOR.execute(MultiThreadDemo::run3);
+//        EXECUTOR.shutdown();
+        new Thread(MultiThreadDemo::run).start();
+        new Thread(MultiThreadDemo::run2).start();
     }
 
     private static void run() {
         while (FLAG.get() <= PRINT_COUNT) {
             REENTRANT_LOCK.lock();
             try {
-                if (FLAG.get() % 3 == 0) {
+                if (FLAG.get() % 2 == 0) {
                     System.out.println(Thread.currentThread().getName() + "\t" + FLAG);
-                    FLAG.getAndIncrement();
-                    Thread.sleep(1000);
+                    int andIncrement = FLAG.getAndIncrement();
+                    System.out.println(Thread.currentThread().getName()+"\t" +"andIncrement = " + andIncrement);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -56,10 +55,10 @@ public class MultiThreadDemo {
         while (FLAG.get() <= PRINT_COUNT) {
             REENTRANT_LOCK.lock();
             try {
-                if (FLAG.get() % 3 == 1) {
+                if (FLAG.get() % 2 == 1) {
                     System.out.println(Thread.currentThread().getName() + "\t" + FLAG);
-                    FLAG.getAndIncrement();
-                    Thread.sleep(1000);
+                    int andIncrement = FLAG.getAndIncrement();
+                    System.out.println(Thread.currentThread().getName()+"\t" +"andIncrement = " + andIncrement);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -76,7 +75,6 @@ public class MultiThreadDemo {
                 if (FLAG.get() % 3 == 2) {
                     System.out.println(Thread.currentThread().getName() + "\t" + FLAG);
                     FLAG.getAndIncrement();
-                    Thread.sleep(1000);
                 }
             } catch (Exception exception) {
                 exception.printStackTrace();

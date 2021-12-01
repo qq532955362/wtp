@@ -18,6 +18,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.pig4cloud.nacos</groupId>
+            <artifactId>nacos-console</artifactId>
+            <version>1.4.1</version>
+        </dependency>
     </dependencies>
 
 </project>
