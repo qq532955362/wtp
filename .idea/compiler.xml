@@ -8,16 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="util" />
-        <module name="wtp" />
         <module name="shell" />
-        <module name="cloud" />
+        <module name="nacos" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cloud" target="11" />
+      <module name="nacos" target="11" />
       <module name="open" target="11" />
       <module name="shell" target="11" />
       <module name="util" target="11" />
+      <module name="wtp" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
