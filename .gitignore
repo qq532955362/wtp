@@ -8,3 +8,5 @@ out
 gen
 
 **/target/
+##on Nacos standalone mode ‘s database Derby boot log
+derby.log
