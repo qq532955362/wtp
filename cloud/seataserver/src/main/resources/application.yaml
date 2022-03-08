@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: seate-server
+server:
+  port: 9200

@@ -9,19 +9,39 @@
     </parent>
     <modules>
         <module>nacos</module>
+        <module>seataserver</module>
+        <module>user</module>
     </modules>
     <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>cloud</artifactId>
+    <properties>
+        <nacos.config.version>2.2.1.RELEASE</nacos.config.version>
+        <springboot.starter.version>2.2.5.RELEASE</springboot.starter.version>
+        <nacos.server.version>1.4.1</nacos.server.version>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
+
             <dependency>
                 <groupId>com.pig4cloud.nacos</groupId>
                 <artifactId>nacos-console</artifactId>
-                <version>1.4.1</version>
+                <version>${nacos.server.version}</version>
             </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba.cloud</groupId>-->
+<!--                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+<!--                <version>${nacos.config.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-starter</artifactId>-->
+<!--                <version>${springboot.starter.version}</version>-->
+<!--            </dependency>-->
         </dependencies>
     </dependencyManagement>
 
