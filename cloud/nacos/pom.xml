@@ -21,7 +21,12 @@
         <dependency>
             <groupId>com.pig4cloud.nacos</groupId>
             <artifactId>nacos-console</artifactId>
-            <version>1.4.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 

@@ -17,8 +17,8 @@
 
     <artifactId>cloud</artifactId>
     <properties>
-        <nacos.config.version>2.2.1.RELEASE</nacos.config.version>
-        <springboot.starter.version>2.2.5.RELEASE</springboot.starter.version>
+        <spring.cloud.alibaba>2021.1</spring.cloud.alibaba>
+        <springboot.version>2.4.2</springboot.version>
         <nacos.server.version>1.4.1</nacos.server.version>
     </properties>
 
@@ -37,11 +37,11 @@
 <!--                <version>${nacos.config.version}</version>-->
 <!--            </dependency>-->
 
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-starter</artifactId>-->
-<!--                <version>${springboot.starter.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
