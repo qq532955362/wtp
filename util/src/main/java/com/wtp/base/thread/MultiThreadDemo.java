@@ -1,4 +1,4 @@
-package com.wtp.excel.thread;
+package com.wtp.base.thread;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;

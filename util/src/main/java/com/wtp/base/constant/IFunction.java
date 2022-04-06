@@ -1,4 +1,4 @@
-package com.wtp.excel.constant;
+package com.wtp.base.constant;
 
 /**
  * @author wangtaiping

@@ -1,9 +1,9 @@
-package com.wtp.excel.thread;
+package com.wtp.base.thread;
 
-import com.wtp.excel.constant.IFunction;
-import com.wtp.excel.constant.IModule;
-import com.wtp.excel.constant.MyIFunction;
-import com.wtp.excel.constant.MyIModule;
+import com.wtp.base.constant.IFunction;
+import com.wtp.base.constant.IModule;
+import com.wtp.base.constant.MyIFunction;
+import com.wtp.base.constant.MyIModule;
 
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
