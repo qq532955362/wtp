@@ -4,6 +4,10 @@ package com.wtp.base.constant;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.Arrays;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 @Getter
 @AllArgsConstructor
 public enum AimCountryEnum {
@@ -75,7 +79,7 @@ public enum AimCountryEnum {
     COUNTRY_GT(64,"危地马拉","GT","Guatemala"),
     COUNTRY_GU(65,"关岛","GU","Guam"),
     COUNTRY_GY(66,"圭亚那","GY","Guyana"),
-    COUNTRY_HK(67,"香港","HK","Hong kong"),
+    COUNTRY_HK(67,"中国香港","HK","Hong kong"),
     COUNTRY_HN(68,"洪都拉斯","HN","Honduras"),
     COUNTRY_HR(69,"克罗地亚","HR","Croatia"),
     COUNTRY_HT(70,"海地","HT","Haiti"),
@@ -107,7 +111,7 @@ public enum AimCountryEnum {
     COUNTRY_MG(96,"马达加斯加","MG","Madagascar"),
     COUNTRY_ML(97,"马里","ML","Mali"),
     COUNTRY_MN(98,"蒙古","MN","Mongolia"),
-    COUNTRY_MO(99,"澳门","MO","Macao"),
+    COUNTRY_MO(99,"中国澳门","MO","Macao"),
 
     UNKNOWN(100, "Unknown", "Unknown", "Unknown"),
     COUNTRY_MR(101,"毛里塔尼亚","MR","Mauritania"),
@@ -147,7 +151,7 @@ public enum AimCountryEnum {
     COUNTRY_TM(135,"土库曼斯坦","TM","Turkmenistan"),
     COUNTRY_TN(136,"突尼斯","TN","Tunisia"),
     COUNTRY_TO(137,"汤加","TO","Tong"),
-    COUNTRY_TW(138,"台湾","TW","Taiwan"),
+    COUNTRY_TW(138,"中国台湾","TW","Taiwan"),
     COUNTRY_TZ(139,"坦桑尼亚","TZ","Tanzania"),
     COUNTRY_UA(140,"乌克兰","UA","Ukraine"),
     COUNTRY_UG(141,"乌干达","UG","Uganda"),
@@ -164,4 +168,14 @@ public enum AimCountryEnum {
     private String cnName;
     private String marketIdentifier;
     private String fullName;
+
+    public static Map<String,AimCountryEnum> markMapEnum(){
+        Map<String, AimCountryEnum> collect = Arrays.stream(AimCountryEnum.values()).collect(Collectors.toMap(a -> a.getMarketIdentifier(), a -> a));
+        return collect;
+    }
+
+    public static Map<String,AimCountryEnum> fullNameMapEnum(){
+        Map<String, AimCountryEnum> collect = Arrays.stream(AimCountryEnum.values()).collect(Collectors.toMap(a -> a.getFullName(), a -> a));
+        return collect;
+    }
 }

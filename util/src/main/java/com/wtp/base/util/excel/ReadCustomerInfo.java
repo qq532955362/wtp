@@ -2,27 +2,32 @@ package com.wtp.base.util.excel;
 
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.annotation.ExcelProperty;
-import com.alibaba.excel.event.AnalysisEventListener;
-import com.alibaba.excel.read.listener.ReadListener;
 import com.wtp.base.constant.AimCountryEnum;
 import lombok.Data;
 
+import java.io.BufferedWriter;
 import java.io.File;
-import java.util.Arrays;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class ReadCustomerInfo {
 
-    public static void readCustomerInfoToSql(String filepath) {
+    public static void main(String[] args) throws IOException {
+        readCustomerInfoToSql("/Users/wangtaiping/Documents/生产-客户信息.xlsx", "/Users/wangtaiping/Documents/update.sql");
+    }
+
+    public static void readCustomerInfoToSql(String filepath, String outPath) throws IOException {
 
         MyListener myListener = new MyListener();
+        //这里的读取可能是api没搞对第一行数据不见了
         EasyExcel.read(new File(filepath), CustomerInfoHead.class, myListener).doReadAll();
         List<CustomerInfoHead> dataList = myListener.dataList;
-        Map<String, Integer> markMapId = Arrays.stream(AimCountryEnum.values()).collect(Collectors.toMap(a -> a.getMarketIdentifier(), b -> b.getId()));
+        Map<String, AimCountryEnum> fullNameMapEnum = AimCountryEnum.fullNameMapEnum();
+        Map<String, AimCountryEnum> markMapEnum = AimCountryEnum.markMapEnum();
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outPath));
         dataList.forEach(data -> {
-            Integer id = data.getId();
             StringBuilder builder = new StringBuilder();
             builder.append("UPDATE `ih_customer_info` SET ");
             builder.append(" `channel`= ");
@@ -34,15 +39,21 @@ public class ReadCustomerInfo {
             builder.append(" , ");
             builder.append(" `country`= ");
             if ("OTHER".equalsIgnoreCase(data.getCountryMark().trim())) {
-
+                builder.append(" ").append(fullNameMapEnum.get(data.getCountryDetail().trim()).getId()).append(" ");
             } else {
-                builder.append(" " + markMapId.get(data) +
-                        " ");
-
+                builder.append(" ").append(markMapEnum.get(data.getCountryMark()).getId()).append(" ");
             }
 
-
+            builder.append("WHERE `id` = ").append(data.getId()).append(";");
+            try {
+                bufferedWriter.write(builder.toString());
+                bufferedWriter.newLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
+        bufferedWriter.flush();
+        bufferedWriter.close();
 
     }
 
