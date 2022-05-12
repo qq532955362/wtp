@@ -9,8 +9,8 @@ import java.util.stream.Collectors;
 public class ReadLineUtil {
 
     public static void main(String[] args) throws IOException {
-        //parseLineOne("/Users/wangtaiping/IdeaProjects/ERP_backend/sales/src/main/resources/com/ihoment/mapper/self/sales/country-new");
-        parseLineTwo("/Users/wangtaiping/IdeaProjects/ERP_backend/sales/src/main/resources/com/ihoment/mapper/self/sales/country-new");
+        //parseLineOne("/Users/wangtaiping/IdeaProjects/open/util/src/main/resources/country-new");
+        parseLineTwo("/Users/wangtaiping/IdeaProjects/open/util/src/main/resources/country-new");
     }
 
     public static void parseLineOne(String filepath) throws IOException {
