@@ -15,14 +15,16 @@ import java.util.Map;
 public class ReadCustomerInfo {
 
     public static void main(String[] args) throws IOException {
-        readCustomerInfoToSql("/Users/wangtaiping/Documents/生产-客户信息.xlsx", "/Users/wangtaiping/Documents/update.sql");
+        readCustomerInfoToSql("/Users/wangtaiping/Documents/生产-客户信息.xlsx", "/Users/wangtaiping/Documents/update-new.sql");
     }
 
     public static void readCustomerInfoToSql(String filepath, String outPath) throws IOException {
 
         MyListener myListener = new MyListener();
-        //这里的读取可能是api没搞对第一行数据不见了
-        EasyExcel.read(new File(filepath), CustomerInfoHead.class, myListener).doReadAll();
+        EasyExcel.read(new File(filepath), CustomerInfoHead.class, myListener)
+                .sheet()
+                //从第1行开始读取（无表头行excel）
+                .headRowNumber(0).doRead();
         List<CustomerInfoHead> dataList = myListener.dataList;
         Map<String, AimCountryEnum> fullNameMapEnum = AimCountryEnum.fullNameMapEnum();
         Map<String, AimCountryEnum> markMapEnum = AimCountryEnum.markMapEnum();
