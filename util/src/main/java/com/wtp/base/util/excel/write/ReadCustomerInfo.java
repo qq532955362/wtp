@@ -1,4 +1,4 @@
-package com.wtp.base.util.excel;
+package com.wtp.base.util.excel.write;
 
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.annotation.ExcelProperty;
