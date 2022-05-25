@@ -1,4 +1,4 @@
-package com.wtp.base.util.mybatisgenerator;
+package com.wtp.common.mbg;
 
 import org.mybatis.generator.api.PluginAdapter;
 

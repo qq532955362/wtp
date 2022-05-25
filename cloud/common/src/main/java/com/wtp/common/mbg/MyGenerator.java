@@ -1,4 +1,4 @@
-package com.wtp.base.util.mybatisgenerator;
+package com.wtp.common.mbg;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

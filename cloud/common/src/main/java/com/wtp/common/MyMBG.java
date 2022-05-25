@@ -1,7 +1,7 @@
-package com.wtp.base;
+package com.wtp.common;
 
 
-import com.wtp.base.util.mybatisgenerator.MyGenerator;
+import com.wtp.common.mbg.MyGenerator;
 
 public class MyMBG {
 
