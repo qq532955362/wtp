@@ -19,6 +19,8 @@ public class MyGenerator {
      *
      * @param applicationName 模块名(与maven模块名严格一致最佳)
      * @param mode            生成model的模式eg:flat conditional hierarchical @see org.mybatis.generator.config.ModelType
+     * @param packageName     生成文件包名
+     * @param pluginPath      插件引用地址
      */
     public void generate(String applicationName, String mode, String packageName, String pluginPath) {
         try {
@@ -51,7 +53,7 @@ public class MyGenerator {
 
             //xmlMapper generate configuration
             SqlMapGeneratorConfiguration sqlMapGeneratorConfiguration = new SqlMapGeneratorConfiguration();
-            sqlMapGeneratorConfiguration.setTargetProject(applicationName+"/src/main/resources");
+            sqlMapGeneratorConfiguration.setTargetProject(applicationName + "/src/main/resources");
             sqlMapGeneratorConfiguration.setTargetPackage("mapper.generator");
             context.setSqlMapGeneratorConfiguration(sqlMapGeneratorConfiguration);
 
@@ -69,7 +71,7 @@ public class MyGenerator {
             TableConfiguration tableConfiguration = new TableConfiguration(context);
             tableConfiguration.setTableName("ih_customer_info");
             //不使用实际列名
-            tableConfiguration.addProperty("useActualColumnNames","false");
+            tableConfiguration.addProperty("useActualColumnNames", "false");
             //某些特殊列重写(如果有) 比如这个public是关键字 如果生成的javaModel与关键字冲突
             ColumnOverride columnOverride = new ColumnOverride("public");
             columnOverride.setJavaProperty("publicStatus");
