@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "country": {
+        "id": "1",
+        "iso": "CN",
+        "maxLevel": "0",
+        "name": "中国",
+        "phonePrefix": "+86",
+        "pinYin": "zhongguo"
+      },
+      "divisionChain": [
+        {
+          "englishName": "xiang gang te bie xing zheng qu",
+          "id": "810000",
+          "name": "香港特别行政区"
+        }
+      ]
+    },
+    {
+      "country": {
+        "id": "1",
+        "iso": "CN",
+        "maxLevel": "0",
+        "name": "中国",
+        "phonePrefix": "+86",
+        "pinYin": "zhongguo"
+      },
+      "divisionChain": [
+        {
+          "englishName": "ao men te bie xing zheng qu",
+          "id": "820000",
+          "name": "澳门特别行政区"
+        }
+      ]
+    },
+    {
+      "country": {
+        "id": "1",
+        "iso": "CN",
+        "maxLevel": "0",
+        "name": "中国",
+        "phonePrefix": "+86",
+        "pinYin": "zhongguo"
+      },
+      "divisionChain": [
+        {
+          "englishName": "tai wan sheng",
+          "id": "710000",
+          "name": "台湾"
+        }
+      ]
+    },
+    {
+      "id": "190",
+      "iso": "SG",
+      "maxLevel": "2",
+      "name": "新加坡",
+      "phonePrefix": "+65",
+      "pinYin": "xinjiapo"
+    },
+    {
+      "id": "125",
+      "iso": "MY",
+      "maxLevel": "3",
+      "name": "马来西亚",
+      "phonePrefix": "+60",
+      "pinYin": "malaixiya"
+    },
+    {
+      "id": "16",
+      "iso": "AU",
+      "maxLevel": "3",
+      "name": "澳大利亚",
+      "phonePrefix": "+61",
+      "pinYin": "aodaliya"
+    },
+    {
+      "id": "150",
+      "iso": "NZ",
+      "maxLevel": "3",
+      "name": "新西兰",
+      "phonePrefix": "+64",
+      "pinYin": "xinxilan"
+    },
+    {
+      "id": "228",
+      "iso": "US",
+      "maxLevel": "3",
+      "name": "美国",
+      "phonePrefix": "+1",
+      "pinYin": "meiguo"
+    },
+    {
+      "id": "37",
+      "iso": "CA",
+      "maxLevel": "3",
+      "name": "加拿大",
+      "phonePrefix": "+1",
+      "pinYin": "jianada"
+    },
+    {
+      "id": "104",
+      "iso": "JP",
+      "maxLevel": "3",
+      "name": "日本",
+      "phonePrefix": "+81",
+      "pinYin": "riben"
+    }
+  ],
+  "label": "直达"
+}

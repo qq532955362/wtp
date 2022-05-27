@@ -25,15 +25,11 @@ public class ResolvingJson {
             }
             bufferedReader.close();
         } catch (FileNotFoundException e) {
-            log.error("文件路劲有误!");
+            log.error("文件路径有误!");
         } catch (IOException e) {
             log.error("读取文件错误!");
         }
         return builder.toString();
-    }
-
-    public static void readStringToJsonObject(String jsonString) {
-
     }
 
     public static void main(String[] args) {
@@ -41,7 +37,7 @@ public class ResolvingJson {
         List<CountryItem> countryItems = JSONObject.parseArray(jsonString, CountryItem.class);
         countryItems.forEach(a -> {
             System.out.println(a.getLabel());
-            a.getItems().forEach(country -> System.out.println("--" + country.getName()));
+            a.getItems().forEach(country -> System.out.println(country.getIso()+":"+ "--" + country.getName()));
         });
 
     }
