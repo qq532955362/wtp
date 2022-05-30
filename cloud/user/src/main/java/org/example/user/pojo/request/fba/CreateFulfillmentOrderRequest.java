@@ -93,6 +93,9 @@ public class CreateFulfillmentOrderRequest {
      */
     private List<FeatureSettings> featureConstraints;
 
+    /**
+     * 订单item列表
+     */
     private List<CreateFulfillmentOrderItem> createFulfillmentOrderItemList;
 
 }
