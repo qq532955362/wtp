@@ -1,4 +1,4 @@
-package org.example.user.pojo.request;
+package org.example.user.pojo.request.address;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;

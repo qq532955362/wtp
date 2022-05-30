@@ -1,8 +1,8 @@
 package org.example.user.controller;
 
 import org.example.user.pojo.ResponseData;
-import org.example.user.pojo.request.AddAddressRequest;
-import org.example.user.pojo.request.UpdateAddressRequest;
+import org.example.user.pojo.request.address.AddAddressRequest;
+import org.example.user.pojo.request.address.UpdateAddressRequest;
 import org.example.user.pojo.vo.AddressVO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
