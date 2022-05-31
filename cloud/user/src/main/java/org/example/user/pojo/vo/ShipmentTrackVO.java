@@ -15,12 +15,18 @@ public class ShipmentTrackVO {
 
     private String trackNumber;
 
+    /**
+     * 轨迹事件列表
+     */
     private List<TrackEvent> trackEventList;
 
+    /**
+     * 轨迹url点击可网页查看
+     */
     private String trackingUrl;
 
     @Data
-    public static class TrackEvent{
+    public static class TrackEvent {
         //提示信息
         private String message;
         //时间节点

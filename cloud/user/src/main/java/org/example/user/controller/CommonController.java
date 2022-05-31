@@ -26,6 +26,13 @@ public class CommonController {
         return null;
     }
 
+    /**
+     * 轨迹预测
+     *
+     * @param packageNumber
+     * @param trackNumber
+     * @return
+     */
     @PostMapping("/shipment/track")
     ResponseEntity<ResponseData<ShipmentTrackVO>> getShipmentTrackInfo(@RequestParam("packageNumber") Integer packageNumber,
                                                                        @RequestParam("trackNumber") String trackNumber) {
