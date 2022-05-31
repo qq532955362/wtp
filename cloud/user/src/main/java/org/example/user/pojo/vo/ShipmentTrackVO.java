@@ -17,6 +17,8 @@ public class ShipmentTrackVO {
 
     private List<TrackEvent> trackEventList;
 
+    private String trackingUrl;
+
     @Data
     public static class TrackEvent{
         //提示信息
