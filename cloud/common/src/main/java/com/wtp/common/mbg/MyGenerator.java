@@ -1,6 +1,5 @@
 package com.wtp.common.mbg;
 
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.*;
@@ -8,7 +7,6 @@ import org.mybatis.generator.internal.DefaultShellCallback;
 
 import java.util.ArrayList;
 
-@Slf4j
 public class MyGenerator {
     private static final String USERNAME = "erp_root";
     private static final String PASSWORD = "Ihoment2018";
@@ -61,10 +59,6 @@ public class MyGenerator {
             //plugin
             PluginConfiguration pluginConfiguration = new PluginConfiguration();
             pluginConfiguration.setConfigurationType("org.mybatis.generator.plugins.ToStringPlugin");
-
-            if (!StringUtils.isEmpty(pluginPath)) {
-                pluginConfiguration.setConfigurationType(pluginPath);
-            }
             context.addPluginConfiguration(pluginConfiguration);
 
             //tables
