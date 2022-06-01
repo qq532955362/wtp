@@ -2,7 +2,6 @@ package org.example.user.pojo.vo;
 
 import lombok.Data;
 
-import java.time.ZonedDateTime;
 import java.util.List;
 
 /**
@@ -30,7 +29,7 @@ public class ShipmentTrackVO {
         //提示信息
         private String message;
         //时间节点
-        private ZonedDateTime eventTime;
+        private Long eventTime;
         //事件代码
         private String code;
         //事件信息(表示状态如包裹扫描、派送中)

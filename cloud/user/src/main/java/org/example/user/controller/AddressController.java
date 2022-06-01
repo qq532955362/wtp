@@ -16,7 +16,7 @@ import java.util.List;
  * @module app地址管理
  */
 @RestController
-@RequestMapping("/front/address")
+@RequestMapping("/app-mall/v1/address")
 public class AddressController {
 
     /**
@@ -25,7 +25,7 @@ public class AddressController {
      * @return DUPLICATE_NAME(1001)
      * @rest
      */
-    @GetMapping
+    @GetMapping("/list")
     public ResponseEntity<ResponseData<List<AddressVO>>> getAddress() {
         return null;
     }
@@ -34,11 +34,11 @@ public class AddressController {
      * 获取地址详情
      *
      * @param id 地址标识
-     * @return NOT_FOUND(1002)
+     * @return
      * @rest
      */
-    @GetMapping("/{id}")
-    public ResponseEntity<ResponseData<AddressVO>> getAddress(@PathVariable(name = "id") Integer id) {
+    @GetMapping
+    public ResponseEntity<ResponseData<AddressVO>> getAddress(@RequestParam("id") Integer id) {
         return null;
     }
 
@@ -46,7 +46,7 @@ public class AddressController {
      * 新增收货地址
      *
      * @param addAddressRequest 新增请求
-     * @return NOT_FOUND(1002)
+     * @return
      * @rest
      */
     @PostMapping
@@ -61,8 +61,8 @@ public class AddressController {
      * @return NOT_FOUND(1002)
      * @rest
      */
-    @DeleteMapping("/{id}")
-    public ResponseEntity<ResponseData<Boolean>> deleteAddress(@PathVariable("id") Integer id) {
+    @DeleteMapping
+    public ResponseEntity<ResponseData<Boolean>> deleteAddress(@RequestParam("id") Integer id) {
         return null;
     }
 
@@ -70,11 +70,11 @@ public class AddressController {
      * 更新收货地址
      *
      * @param updateAddressRequest 更新请求
-     * @return NOT_FOUND(1002)
+     * @return
      * @rest
      */
-    @PutMapping("/{id}")
-    public ResponseEntity<ResponseData<Boolean>> updateAddress(@PathVariable("id") UpdateAddressRequest updateAddressRequest) {
+    @PutMapping
+    public ResponseEntity<ResponseData<Boolean>> updateAddress(@RequestParam("id") Integer id, @RequestBody UpdateAddressRequest updateAddressRequest) {
         return null;
     }
 
@@ -82,11 +82,11 @@ public class AddressController {
      * 设为默认收货地址
      *
      * @param id 地址标识
-     * @return NOT_FOUND(1002)
+     * @return
      * @rest
      */
-    @PutMapping("/default/{id}")
-    public ResponseEntity<ResponseData<Boolean>> updateDefaultAddress(@PathVariable("id") Integer id) {
+    @PutMapping("/default")
+    public ResponseEntity<ResponseData<Boolean>> updateDefaultAddress(@RequestParam("id") Integer id) {
         return null;
     }
 }

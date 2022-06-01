@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
  * @module 公共分类
  */
 @RestController
-@RequestMapping("/app-common")
+@RequestMapping("/app-mall/v1")
 public class CommonController {
     /**
      * 预测收货时间
@@ -29,12 +29,12 @@ public class CommonController {
     /**
      * 轨迹预测
      *
-     * @param packageNumber
+     * @param orderNumber
      * @param trackNumber
      * @return
      */
     @PostMapping("/shipment/track")
-    ResponseEntity<ResponseData<ShipmentTrackVO>> getShipmentTrackInfo(@RequestParam("packageNumber") Integer packageNumber,
+    ResponseEntity<ResponseData<ShipmentTrackVO>> getShipmentTrackInfo(@RequestParam("orderNumber") String orderNumber,
                                                                        @RequestParam("trackNumber") String trackNumber) {
         return null;
     }

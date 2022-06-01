@@ -4,7 +4,6 @@ import lombok.Data;
 import org.example.user.constants.DeliveryOrderStatus;
 import org.example.user.constants.DeliveryPackageStatus;
 
-import java.time.ZonedDateTime;
 import java.util.List;
 
 @Data
@@ -20,16 +19,16 @@ public class AppDeliveryOrderVO {
     //配送包裹状态
     private DeliveryPackageStatus deliveryPackageStatus;
     //订单创建时间
-    private ZonedDateTime createOrderTime;
+    private Long createOrderTime;
     //支付时间
-    private ZonedDateTime purchaseOrderTime;
+    private Long purchaseOrderTime;
     //发货时间
-    private ZonedDateTime startDeliveryTime;
+    private Long startDeliveryTime;
     //国家
     private String country;
     //iso国家码
     private String countryCode;
-    //发货
+    //发货仓
     private String overseaWarehouse;
 
     @Data

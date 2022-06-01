@@ -14,7 +14,7 @@ import java.util.List;
  * @module app商城
  */
 @RestController
-@RequestMapping("/app-delivery-order")
+@RequestMapping("/app-mall-backend/v1/delivery-order")
 public class DeliveryAdminController {
 
     /**
