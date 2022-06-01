@@ -63,7 +63,7 @@ public class MyGenerator {
 
             //tables
             TableConfiguration tableConfiguration = new TableConfiguration(context);
-            tableConfiguration.setTableName("ih_customer_info");
+            tableConfiguration.setTableName("app_shipping_address");
             //不使用实际列名
             tableConfiguration.addProperty("useActualColumnNames", "false");
             //某些特殊列重写(如果有) 比如这个public是关键字 如果生成的javaModel与关键字冲突
