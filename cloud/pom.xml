@@ -21,6 +21,7 @@
         <spring.cloud.alibaba>2021.1</spring.cloud.alibaba>
         <springboot.version>2.4.2</springboot.version>
         <nacos.server.version>1.4.1</nacos.server.version>
+        <lombok.version>1.18.12</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -56,7 +57,7 @@
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.12</version>
+                <version>${lombok.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

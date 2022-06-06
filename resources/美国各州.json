@@ -1,0 +1,301 @@
+[
+  {
+    "items": [
+      {
+        "id": "922865760000000000",
+        "name": "Alabama"
+      },
+      {
+        "id": "922865750000000000",
+        "name": "Alaska"
+      },
+      {
+        "id": "922865900000000000",
+        "name": "Arizona"
+      },
+      {
+        "id": "922865820000000000",
+        "name": "Arkansas"
+      }
+    ],
+    "label": "A"
+  },
+  {
+    "items": [
+      {
+        "id": "922867650000000000",
+        "name": "California"
+      },
+      {
+        "id": "922867790000000000",
+        "name": "Colorado"
+      },
+      {
+        "id": "922867840000000000",
+        "name": "Connecticut"
+      }
+    ],
+    "label": "C"
+  },
+  {
+    "items": [
+      {
+        "id": "922868690000000000",
+        "name": "Delaware"
+      },
+      {
+        "id": "922868670000000000",
+        "name": "District of Columbia"
+      }
+    ],
+    "label": "D"
+  },
+  {
+    "items": [
+      {
+        "id": "922870760000000000",
+        "name": "Florida"
+      }
+    ],
+    "label": "F"
+  },
+  {
+    "items": [
+      {
+        "id": "922871650000000000",
+        "name": "Georgia"
+      }
+    ],
+    "label": "G"
+  },
+  {
+    "items": [
+      {
+        "id": "922872730000000000",
+        "name": "Hawaii"
+      }
+    ],
+    "label": "H"
+  },
+  {
+    "items": [
+      {
+        "id": "922873680000000000",
+        "name": "Idaho"
+      },
+      {
+        "id": "922873760000000000",
+        "name": "Illinois"
+      },
+      {
+        "id": "922873780000000000",
+        "name": "Indiana"
+      },
+      {
+        "id": "922873650000000000",
+        "name": "Iowa"
+      }
+    ],
+    "label": "I"
+  },
+  {
+    "items": [
+      {
+        "id": "922875830000000000",
+        "name": "Kansas"
+      },
+      {
+        "id": "922875890000000000",
+        "name": "Kentucky"
+      }
+    ],
+    "label": "K"
+  },
+  {
+    "items": [
+      {
+        "id": "922876650000000000",
+        "name": "Louisiana"
+      }
+    ],
+    "label": "L"
+  },
+  {
+    "items": [
+      {
+        "id": "922877690000000000",
+        "name": "Maine"
+      },
+      {
+        "id": "922877680000000000",
+        "name": "Maryland"
+      },
+      {
+        "id": "922877650000000000",
+        "name": "Massachusetts"
+      },
+      {
+        "id": "922877730000000000",
+        "name": "Michigan"
+      },
+      {
+        "id": "922877780000000000",
+        "name": "Minnesota"
+      },
+      {
+        "id": "922877830000000000",
+        "name": "Mississippi"
+      },
+      {
+        "id": "922877790000000000",
+        "name": "Missouri"
+      },
+      {
+        "id": "922877840000000000",
+        "name": "Montana"
+      }
+    ],
+    "label": "M"
+  },
+  {
+    "items": [
+      {
+        "id": "922878690000000000",
+        "name": "Nebraska"
+      },
+      {
+        "id": "922878860000000000",
+        "name": "Nevada"
+      },
+      {
+        "id": "922878720000000000",
+        "name": "New Hampshire"
+      },
+      {
+        "id": "922878740000000000",
+        "name": "New Jersey"
+      },
+      {
+        "id": "922878770000000000",
+        "name": "New Mexico"
+      },
+      {
+        "id": "922878890000000000",
+        "name": "New York"
+      },
+      {
+        "id": "922878670000000000",
+        "name": "North Carolina"
+      },
+      {
+        "id": "922878680000000000",
+        "name": "North Dakota"
+      }
+    ],
+    "label": "N"
+  },
+  {
+    "items": [
+      {
+        "id": "922879720000000000",
+        "name": "Ohio"
+      },
+      {
+        "id": "922879750000000000",
+        "name": "Oklahoma"
+      },
+      {
+        "id": "922879820000000000",
+        "name": "Oregon"
+      }
+    ],
+    "label": "O"
+  },
+  {
+    "items": [
+      {
+        "id": "922880650000000000",
+        "name": "Pennsylvania"
+      }
+    ],
+    "label": "P"
+  },
+  {
+    "items": [
+      {
+        "id": "922882730000000000",
+        "name": "Rhode Island"
+      }
+    ],
+    "label": "R"
+  },
+  {
+    "items": [
+      {
+        "id": "922883670000000000",
+        "name": "South Carolina"
+      },
+      {
+        "id": "922883680000000000",
+        "name": "South Dakota"
+      }
+    ],
+    "label": "S"
+  },
+  {
+    "items": [
+      {
+        "id": "922884780000000000",
+        "name": "Tennessee"
+      },
+      {
+        "id": "922884880000000000",
+        "name": "Texas"
+      }
+    ],
+    "label": "T"
+  },
+  {
+    "items": [
+      {
+        "id": "922885840000000000",
+        "name": "Utah"
+      }
+    ],
+    "label": "U"
+  },
+  {
+    "items": [
+      {
+        "id": "922886840000000000",
+        "name": "Vermont"
+      },
+      {
+        "id": "922886650000000000",
+        "name": "Virginia"
+      }
+    ],
+    "label": "V"
+  },
+  {
+    "items": [
+      {
+        "id": "922887650000000000",
+        "name": "Washington"
+      },
+      {
+        "id": "922887860000000000",
+        "name": "West Virginia"
+      },
+      {
+        "id": "922887730000000000",
+        "name": "Wisconsin"
+      },
+      {
+        "id": "922887890000000000",
+        "name": "Wyoming"
+      }
+    ],
+    "label": "W"
+  }
+]
