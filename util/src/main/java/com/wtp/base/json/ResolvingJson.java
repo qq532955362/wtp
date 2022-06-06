@@ -33,7 +33,7 @@ public class ResolvingJson {
     }
 
     public static void main(String[] args) {
-        String jsonString = readFileToJson("/Users/wangtaiping/IdeaProjects/open/resources/country.json");
+        String jsonString = readFileToJson("resources/country.json");
         List<CountryItem> countryItems = JSONObject.parseArray(jsonString, CountryItem.class);
         countryItems.forEach(a -> {
             System.out.println(a.getLabel());

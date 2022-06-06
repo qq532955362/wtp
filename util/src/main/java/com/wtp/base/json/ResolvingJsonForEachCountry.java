@@ -17,7 +17,7 @@ public class ResolvingJsonForEachCountry {
 
         String jsonString = ResolvingJson.readFileToJson(filename);
         List<OutState> outStateList = JSONObject.parseArray(jsonString, OutState.class);
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("/Users/wangtaiping/IdeaProjects/open/resources/美国各州sql.sql"));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("resources/美国各州sql.sql"));
         AtomicInteger flag = new AtomicInteger(236);
         outStateList.forEach(a -> {
             try {
@@ -73,7 +73,7 @@ public class ResolvingJsonForEachCountry {
 
     @Test
     public void testOut() throws IOException {
-        List<OutState> outStates = resolveAmerican("/Users/wangtaiping/IdeaProjects/open/resources/美国.json");
+        List<OutState> outStates = resolveAmerican("resources/美国.json");
     }
 
 

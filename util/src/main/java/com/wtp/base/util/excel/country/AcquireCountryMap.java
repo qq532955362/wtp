@@ -19,7 +19,7 @@ public class AcquireCountryMap {
         EasyExcel.read(new FileInputStream(filename), CountryMapListener.CountryInfoData.class, countryMapListener).sheet().headRowNumber(0).doRead();
         List<CountryMapListener.CountryInfoData> dataList = countryMapListener.getDataList();
         Map<String, CountryMapListener.CountryInfoData> baiduMap = dataList.stream().collect(Collectors.toMap(a -> a.getIso2(), Function.identity()));
-        String jsonString = ResolvingJson.readFileToJson("/Users/wangtaiping/IdeaProjects/open/resources/country.json");
+        String jsonString = ResolvingJson.readFileToJson("resources/country.json");
         List<ResolvingJson.CountryItem> countryItemList = JSONObject.parseArray(jsonString, ResolvingJson.CountryItem.class);
         List<ResolvingJson.CountryItem.Country> jsonCountryList = new ArrayList<>();
         countryItemList.forEach(a -> jsonCountryList.addAll(a.getItems()));
@@ -45,7 +45,7 @@ public class AcquireCountryMap {
             validatePinyinMap.put(a, taoBaoIsoPinyinMap.get(a));
         });
 
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("/Users/wangtaiping/IdeaProjects/open/resources/新增国家sql.sql"));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("resources/新增国家sql.sql"));
         taoBaoIsoNameMap.forEach((a, b) -> {
             try {
                 bufferedWriter.write("insert into `app_administration` (`cn_name`,`en_name`,`pinyin`,`iso`,phone_prefix) VALUES " + String.format("( '%s' , '%s' , '%s' ,'%s' ,'%s');",
@@ -64,6 +64,6 @@ public class AcquireCountryMap {
     }
 
     public static void main(String[] args) throws IOException {
-        acquire("/Users/wangtaiping/IdeaProjects/open/resources/国家或地区代码ISO3166标准.xlsx");
+        acquire("resources/国家或地区代码ISO3166标准.xlsx");
     }
 }
