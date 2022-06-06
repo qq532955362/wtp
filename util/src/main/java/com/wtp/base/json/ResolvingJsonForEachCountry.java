@@ -19,15 +19,15 @@ public class ResolvingJsonForEachCountry {
         List<OutState> outStateList = JSONObject.parseArray(jsonString, OutState.class);
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("/Users/wangtaiping/IdeaProjects/open/resources/美国各州sql.sql"));
         AtomicInteger flag = new AtomicInteger(236);
-        outStateList.forEach(a->{
+        outStateList.forEach(a -> {
             try {
-                bufferedWriter.write("INSERT INTO `app_administration` ( `id`,`en_name`, `parent_id`) VALUES " +String.format(" ( '%d','%s','%s');", flag.get(),a.getName(),107));
+                bufferedWriter.write("INSERT INTO `app_administration` ( `id`,`en_name`, `parent_id`) VALUES " + String.format(" ( '%d','%s','%s');", flag.get(), a.getName(), 107));
                 bufferedWriter.newLine();
                 List<OutState.InnerCity> values = a.getValues();
                 values.forEach(innerCity -> {
                     innerCity.getItems().forEach(city -> {
                         try {
-                            bufferedWriter.write("INSERT INTO `app_administration` ( `en_name`, `parent_id`) VALUES " +String.format(" ( '%s','%s');",city.getName(),flag.get()));
+                            bufferedWriter.write("INSERT INTO `app_administration` ( `en_name`, `parent_id`) VALUES " + String.format(" ( '%s','%s');", city.getName(), flag.get()));
                             bufferedWriter.newLine();
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -37,9 +37,14 @@ public class ResolvingJsonForEachCountry {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            try {
+                bufferedWriter.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             flag.incrementAndGet();
+
         });
-        bufferedWriter.flush();
         bufferedWriter.close();
         return outStateList;
     }
