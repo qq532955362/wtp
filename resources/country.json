@@ -130,14 +130,6 @@
         "pinYin": "aodili"
       },
       {
-        "id": "256",
-        "iso": "GBA",
-        "maxLevel": "0",
-        "name": "奥尔德尼岛",
-        "phonePrefix": "",
-        "pinYin": "aoerdenidao"
-      },
-      {
         "id": "3",
         "iso": "AX",
         "maxLevel": "0",
@@ -152,14 +144,6 @@
         "name": "阿塞拜疆",
         "phonePrefix": "+994",
         "pinYin": "asaibaijiang"
-      },
-      {
-        "id": "253",
-        "iso": "ASC",
-        "maxLevel": "0",
-        "name": "阿森松岛",
-        "phonePrefix": "",
-        "pinYin": "asensongdao"
       }
     ],
     "label": "A"
@@ -754,14 +738,6 @@
   {
     "items": [
       {
-        "id": "246",
-        "iso": "BQ",
-        "maxLevel": "0",
-        "name": "加勒比荷兰",
-        "phonePrefix": "",
-        "pinYin": "jialebihelan"
-      },
-      {
         "id": "78",
         "iso": "GH",
         "maxLevel": "0",
@@ -911,14 +887,6 @@
         "pinYin": "kenniya"
       },
       {
-        "id": "258",
-        "iso": "KS",
-        "maxLevel": "0",
-        "name": "科索沃",
-        "phonePrefix": "",
-        "pinYin": "kesuowo"
-      },
-      {
         "id": "102",
         "iso": "CI",
         "maxLevel": "0",
@@ -933,14 +901,6 @@
         "name": "科威特",
         "phonePrefix": "+965",
         "pinYin": "keweite"
-      },
-      {
-        "id": "257",
-        "iso": "CW",
-        "maxLevel": "0",
-        "name": "库拉索",
-        "phonePrefix": "",
-        "pinYin": "kulasuo"
       }
     ],
     "label": "K"
@@ -1262,22 +1222,6 @@
         "pinYin": "nanji"
       },
       {
-        "id": "197",
-        "iso": "SGS",
-        "maxLevel": "0",
-        "name": "南乔治亚与南桑威奇群岛",
-        "phonePrefix": "",
-        "pinYin": "nanqiaozhiyayunansangweiqiqundao"
-      },
-      {
-        "id": "245",
-        "iso": "SS",
-        "maxLevel": "0",
-        "name": "南苏丹",
-        "phonePrefix": "+211",
-        "pinYin": "nansudan"
-      },
-      {
         "id": "145",
         "iso": "NR",
         "maxLevel": "0",
@@ -1453,14 +1397,6 @@
         "pinYin": "shatealabo"
       },
       {
-        "id": "254",
-        "iso": "BL",
-        "maxLevel": "0",
-        "name": "圣巴泰勒米岛",
-        "phonePrefix": "",
-        "pinYin": "shengbatailemidao"
-      },
-      {
         "id": "44",
         "iso": "CX",
         "maxLevel": "0",
@@ -1499,22 +1435,6 @@
         "name": "圣卢西亚",
         "phonePrefix": "+1 (758)",
         "pinYin": "shengluxiya"
-      },
-      {
-        "id": "191",
-        "iso": "SX",
-        "maxLevel": "0",
-        "name": "圣马丁(荷)",
-        "phonePrefix": "+590",
-        "pinYin": "shengmading(he)"
-      },
-      {
-        "id": "259",
-        "iso": "MF",
-        "maxLevel": "0",
-        "name": "圣马丁岛",
-        "phonePrefix": "",
-        "pinYin": "shengmadingdao"
       },
       {
         "id": "183",
@@ -1999,5 +1919,74 @@
       }
     ],
     "label": "Z"
+  },
+  {
+    "items": [
+      {
+        "id": "1",
+        "iso": "CN",
+        "maxLevel": "0",
+        "name": "中国",
+        "phonePrefix": "+86",
+        "pinYin": "zhongguo"
+      },
+      {
+        "id": "190",
+        "iso": "SG",
+        "maxLevel": "2",
+        "name": "新加坡",
+        "phonePrefix": "+65",
+        "pinYin": "xinjiapo"
+      },
+      {
+        "id": "125",
+        "iso": "MY",
+        "maxLevel": "3",
+        "name": "马来西亚",
+        "phonePrefix": "+60",
+        "pinYin": "malaixiya"
+      },
+      {
+        "id": "16",
+        "iso": "AU",
+        "maxLevel": "3",
+        "name": "澳大利亚",
+        "phonePrefix": "+61",
+        "pinYin": "aodaliya"
+      },
+      {
+        "id": "150",
+        "iso": "NZ",
+        "maxLevel": "3",
+        "name": "新西兰",
+        "phonePrefix": "+64",
+        "pinYin": "xinxilan"
+      },
+      {
+        "id": "228",
+        "iso": "US",
+        "maxLevel": "3",
+        "name": "美国",
+        "phonePrefix": "+1",
+        "pinYin": "meiguo"
+      },
+      {
+        "id": "37",
+        "iso": "CA",
+        "maxLevel": "3",
+        "name": "加拿大",
+        "phonePrefix": "+1",
+        "pinYin": "jianada"
+      },
+      {
+        "id": "104",
+        "iso": "JP",
+        "maxLevel": "3",
+        "name": "日本",
+        "phonePrefix": "+81",
+        "pinYin": "riben"
+      }
+    ],
+    "label": "直达"
   }
 ]
