@@ -38,6 +38,11 @@
             <artifactId>lombok</artifactId>
             <version>1.18.12</version>
         </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.7.14</version>
+        </dependency>
     </dependencies>
 
 
@@ -56,7 +61,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.wtp.base.MyMBG</mainClass>
+                    <mainClass>com.wtp.common.MyMBG</mainClass>
                     <cleanupDaemonThreads>false</cleanupDaemonThreads>
                     <arguments>
                         <argument>util</argument>   <!--项目名如果为某项目的子项目 则 parent/son -->
