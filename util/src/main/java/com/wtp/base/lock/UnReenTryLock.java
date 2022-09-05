@@ -39,6 +39,5 @@ public class UnReenTryLock {
 
     @Test
     public void test(){
-        new BlockingDeque<>()
     }
 }

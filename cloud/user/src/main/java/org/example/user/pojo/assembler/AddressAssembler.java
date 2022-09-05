@@ -1,6 +1,6 @@
 package org.example.user.pojo.assembler;
 
-import org.example.user.pojo.dao.dao.model.AppShippingAddress;
+import org.example.user.pojo.domain.AppShippingAddress;
 import org.example.user.pojo.request.address.AddAddressRequest;
 import org.example.user.pojo.vo.AddressVO;
 import org.mapstruct.Mapper;

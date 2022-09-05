@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: user
+  profiles:
+    active: local1
+server:
+  port: 9201
+  cloud:
+    nacos:
+      server-addr: 192.168.1.4:9100

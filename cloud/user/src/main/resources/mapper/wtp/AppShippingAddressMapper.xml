@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.user.pojo.mapper.AppShippingAddressMapper">
+
+    <resultMap id="BaseResultMap" type="org.example.user.pojo.domain.AppShippingAddress">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="site" column="site" jdbcType="VARCHAR"/>
+            <result property="country" column="country" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="firstName" column="first_name" jdbcType="VARCHAR"/>
+            <result property="lastName" column="last_name" jdbcType="VARCHAR"/>
+            <result property="zip" column="zip" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="address1" column="address1" jdbcType="VARCHAR"/>
+            <result property="address2" column="address2" jdbcType="VARCHAR"/>
+            <result property="city" column="city" jdbcType="VARCHAR"/>
+            <result property="province" column="province" jdbcType="VARCHAR"/>
+            <result property="provinceCode" column="province_code" jdbcType="VARCHAR"/>
+            <result property="defaultAddress" column="default_address" jdbcType="BIGINT"/>
+            <result property="deleted" column="deleted" jdbcType="TINYINT"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,site,
+        country,email,first_name,
+        last_name,zip,phone,
+        address1,address2,city,
+        province,province_code,default_address,
+        deleted,create_time,update_time
+    </sql>
+</mapper>

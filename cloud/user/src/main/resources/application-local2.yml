@@ -1,0 +1,47 @@
+spring:
+  shardingsphere:
+    datasource:
+      props:
+        sql.show: true
+      wtp-master:
+        type: com.alibaba.druid.pool.DruidDataSource
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://govee-test-cluster-v1.cluster-cviu5goyqplm.us-east-1.rds.amazonaws.com:3306/os?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+          username: application
+          password: 546145af5060dae5
+          name: wtp-master
+          initialSize: 5
+          asyncInit: true
+          minIdle: 10
+          maxActive: 20
+          timeBetweenEvictionRunsMillis: 60000
+          minEvictableIdleTimeMillis: 300000
+          validationQuery: SELECT 'x'
+          validation-query-timeout: 2000
+          testWhileIdle: true
+          testOnBorrow: false
+          testOnReturn: false
+          useGlobalDataSourceStat: true
+          filters: slf4j
+          connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      wtp-slave:
+        type: com.alibaba.druid.pool.DruidDataSource
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://govee-test-cluster-v1.cluster-cviu5goyqplm.us-east-1.rds.amazonaws.com:3306/os?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+          username: application
+          password: 546145af5060dae5
+          name: wtp-slave
+          initialSize: 5
+          asyncInit: true
+          minIdle: 10
+          maxActive: 20
+          timeBetweenEvictionRunsMillis: 60000
+          minEvictableIdleTimeMillis: 300000
+          validationQuery: SELECT 'x'
+          validation-query-timeout: 2000
+          testWhileIdle: true
+          testOnBorrow: false
+          testOnReturn: false
+          useGlobalDataSourceStat: true
+          filters: slf4j
+          connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000

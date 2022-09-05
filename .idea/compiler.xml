@@ -7,8 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="util" />
         <module name="common" />
+        <module name="util" />
         <module name="seataserver" />
         <module name="nacos" />
       </profile>
@@ -33,6 +33,7 @@
       <module name="shell" target="11" />
       <module name="user" target="1.8" />
       <module name="util" target="11" />
+      <module name="wtp" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

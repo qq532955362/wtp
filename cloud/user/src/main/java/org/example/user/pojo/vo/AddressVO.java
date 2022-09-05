@@ -52,6 +52,6 @@ public class AddressVO {
     /**
      * 是否默认地址
      */
-    private Boolean defaultAddress;
+    private Long defaultAddress;
 
 }
