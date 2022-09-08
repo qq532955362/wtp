@@ -1,7 +1,6 @@
 package org.example.user.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.catalina.core.ApplicationPushBuilder;
 import org.example.user.listener.PrintHelloEvent;
 import org.example.user.service.MysqlAsyncThreadTestService;
 import org.springframework.context.ApplicationEventPublisher;
