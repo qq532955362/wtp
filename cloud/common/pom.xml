@@ -74,33 +74,4 @@
 
     </dependencies>
 
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.0.0</version>
-                <executions>
-                    <execution>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <mainClass>com.wtp.common.MyMBG</mainClass>
-                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
-                    <arguments>
-                        <argument>util</argument>   <!--项目名如果为某项目的子项目 则 parent/son -->
-                        <argument>flat</argument>   <!--model生成模式具体@see org.mybatis.generator.config.ModelType -->
-                        <argument>org.example.user.pojo</argument>  <!--pojo的mapper与example生成包路径-->
-                        <argument>com.wtp.base.util.mybatisgenerator.MyDefaultPlugin</argument> <!--插件引用-->
-                    </arguments>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>

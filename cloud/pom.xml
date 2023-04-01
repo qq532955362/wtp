@@ -12,6 +12,7 @@
         <module>seataserver</module>
         <module>user</module>
         <module>common</module>
+        <module>test</module>
     </modules>
     <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
@@ -22,6 +23,11 @@
         <springboot.version>2.4.2</springboot.version>
         <nacos.server.version>1.4.1</nacos.server.version>
         <lombok.version>1.18.12</lombok.version>
+        <org.mapstruct.version>1.5.0.RC1</org.mapstruct.version>
+        <druid.version>1.1.23</druid.version>
+        <sharding.version>4.0.0-RC1</sharding.version>
+        <springboot.mybatis-plus>3.5.1</springboot.mybatis-plus>
+        <fastjson.version>1.2.80</fastjson.version>
     </properties>
 
     <dependencyManagement>
@@ -58,6 +64,22 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${springboot.mybatis-plus}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
