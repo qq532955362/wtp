@@ -12,7 +12,7 @@
         <module>seataserver</module>
         <module>user</module>
         <module>common</module>
-        <module>test</module>
+        <module>car</module>
     </modules>
     <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
