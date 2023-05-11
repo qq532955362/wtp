@@ -2,6 +2,9 @@ package org.example.wtp.domain;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 /**
@@ -13,6 +16,7 @@ public class CarSpeed implements Serializable {
     /**
      * 
      */
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
