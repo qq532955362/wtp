@@ -2,8 +2,8 @@ package org.example.wtp.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.example.wtp.domain.CarSpeed;
-import org.example.wtp.service.CarSpeedService;
 import org.example.wtp.mapper.CarSpeedMapper;
+import org.example.wtp.service.CarSpeedService;
 import org.springframework.stereotype.Service;
 
 /**

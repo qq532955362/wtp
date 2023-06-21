@@ -12,4 +12,7 @@
             <result property="updateTime" column="update_time" jdbcType="BIGINT"/>
             <result property="disabled" column="disabled" jdbcType="TINYINT"/>
     </resultMap>
+    <select id="selectCursor" resultMap="BaseResultMap"
+            resultType="org.example.wtp.domain.CarSpeed">select id, car_id, speed, create_time, update_time, disabled
+                                                         from car_speed</select>
 </mapper>

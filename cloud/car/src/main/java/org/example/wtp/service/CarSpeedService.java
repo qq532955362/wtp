@@ -1,7 +1,7 @@
 package org.example.wtp.service;
 
-import org.example.wtp.domain.CarSpeed;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.example.wtp.domain.CarSpeed;
 
 /**
 * @author wangtaiping
