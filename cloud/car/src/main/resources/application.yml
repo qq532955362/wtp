@@ -1,5 +1,7 @@
 server:
   port: 9999
+  http2:
+    enabled: true
 spring:
   profiles:
     active: dev

@@ -19,19 +19,31 @@
 
     <artifactId>cloud</artifactId>
     <properties>
-        <spring.cloud.alibaba>2021.1</spring.cloud.alibaba>
-        <springboot.version>2.4.2</springboot.version>
+        <spring.cloud.alibaba>2023.0.1.0</spring.cloud.alibaba>
+        <springboot.version>3.2.0</springboot.version>
         <nacos.server.version>1.4.1</nacos.server.version>
         <lombok.version>1.18.12</lombok.version>
         <org.mapstruct.version>1.5.0.RC1</org.mapstruct.version>
         <druid.version>1.1.23</druid.version>
         <sharding.version>4.0.0-RC1</sharding.version>
-        <springboot.mybatis-plus>3.5.1</springboot.mybatis-plus>
+        <springboot.mybatis-plus>3.5.12</springboot.mybatis-plus>
         <fastjson.version>1.2.80</fastjson.version>
+        <slf4j.version>2.0.12</slf4j.version>  <!-- Spring Boot 3.5.0 使用的 SLF4J 2.x -->
+        <logback.version>1.4.14</logback.version> <!-- Spring Boot 3.5.0 使用的 Logback -->
+        <mysql.connector>8.0.28</mysql.connector>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- Spring Boot 依赖管理 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${springboot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
             <dependency>
                 <groupId>com.pig4cloud.nacos</groupId>
@@ -61,13 +73,50 @@
                 <version>${springboot.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>6.1.1</version> <!-- 与 Spring Boot 3.2.0 保持一致 -->
+            </dependency>
+
+            <!-- 统一 SLF4J -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <!-- 统一 Logback -->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector}</version>
+            </dependency>
+
+
+            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
                 <version>${springboot.mybatis-plus}</version>
             </dependency>
 
@@ -80,6 +129,12 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>ch.qos.logback</groupId>
+                        <artifactId>logback-classic</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <!--junit5-->

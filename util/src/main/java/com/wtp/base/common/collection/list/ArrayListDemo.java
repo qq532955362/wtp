@@ -9,10 +9,11 @@ import java.util.List;
  */
 public class ArrayListDemo {
     public static void main(String[] args) {
-        List<Integer> integerList = new ArrayList<>();
+        List integerList = new ArrayList<>();
         integerList.add(null);
         integerList.add(null);
         integerList.add(1);
-        integerList.forEach(a-> System.out.println(a));
+        integerList.add(666);
+        integerList.forEach(a-> System.out.println((String) a));
     }
 }

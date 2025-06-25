@@ -1,4 +1,4 @@
-package com.wtp.base.common.collection;
+package com.wtp.base.common.collection.queue;
 
 import lombok.Data;
 
@@ -20,9 +20,7 @@ public class PriorityQueueDemo {
         people.add(new Customer("b",4));
         people.add(new Customer("c",2));
         people.add(new Customer("d",1));
-        people.forEach(a->{
-            System.out.println(a.name);
-        });
+        people.forEach(a-> System.out.println(a.name));
     }
 
     @Data
