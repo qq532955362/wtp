@@ -9,10 +9,11 @@
     </parent>
     <modules>
         <module>nacos</module>
-        <module>seataserver</module>
+        <module>seata-server</module>
         <module>user</module>
         <module>common</module>
         <module>car</module>
+        <module>netty-server</module>
     </modules>
     <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>

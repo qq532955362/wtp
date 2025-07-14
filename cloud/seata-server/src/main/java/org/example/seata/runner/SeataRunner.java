@@ -24,7 +24,7 @@ public class SeataRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        Server.main(getEnvProperties());
+        Server.start(getEnvProperties());
     }
 
     private String[] getEnvProperties() throws Exception {
